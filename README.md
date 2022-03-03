@@ -1,21 +1,15 @@
-<!-- markdownlint-disable-next-line -->
-<p align="center"><img src="https://github-hero-readme.vercel.app/api?username=jalanprakhar"/>
+Hey there,
 
-- Pronouns: <img src="https://raw.githubusercontent.com/ashwinexe/ColoredBadges/master/svg/pronouns/hehim.svg">
-- Hackathon and Community Enthusiast
-- Currently learning Flutter. :star_struck:
-- I love exploring and learning new skills as well as implement those in my projects.
-- I love taking parts in hackathons. :sunglasses:
-- Most important thing :heart: I enjoy what I do. :heart:
+I'm Prakhar Jalan, a front-end Developer based in Mumbai, In, Who is passionate about building user-friendly, easy-to-use single page applications, that makes a difference to the lives of those around me. I like to explore new trends and learn new technologies. I'm Currently learning Flutter, and looking to collaborate on Open-Source projects, with a goal to be more involved in the Community. I'm also open to having a chat about **Anything Web Development Related**.
 
-<h2 align="center">My GitHub Stats <img src="https://github.githubassets.com/images/spinners/octocat-spinner-64.gif"/></h2>
 
-<p align="center"><img src="https://github.com/jalanprakhar/jalanprakhar/blob/main/ezgif.com-gif-maker.gif" alt="@jalanprakhar Gitub Skyline" width="600" /></p>
+## Current Stats
 
-<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=jalanprakhar&theme=dracula&show_icons=true" alt="jalanprakhar" width="400" />
-<img src="http://github-readme-streak-stats.herokuapp.com?user=jalanprakhar&theme=dracula&hide_border=false" alt ="jalanprakhar" width="400" />
-</p>
+|   ![Prakhar's's github activity graph](https://activity-graph.herokuapp.com/graph?username=jalanprakhar&theme=rogue) |
+| :---: |
 
-<p align="center"> <img src="https://github.com/jalanprakhar/jalanprakhar/blob/output/github-contribution-grid-snake.svg" width="700" /> </p>
+| ![Prakhar's GitHub stats](https://github-readme-stats.vercel.app/api?username=jalanprakhar&show_icons=true&theme=city_lights) | ![Prakhar's GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=jalanprakhar&theme=city-lights) |
+| :---: | :---: |
 
-<h3 align="center">Thank you so much for coming here :pray:</h3>
+| ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jalanprakhar&theme=city_lights) |
+| :---: |
