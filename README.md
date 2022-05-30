@@ -1,6 +1,6 @@
 Hey there,
 
-I'm Prakhar Jalan, a front-end Developer based in Mumbai, In, Who is passionate about building user-friendly, easy-to-use single page applications, that makes a difference to the lives of those around me. I like to explore new trends and learn new technologies. I'm Currently learning Flutter, and looking to collaborate on Open-Source projects, with a goal to be more involved in the Community. I'm also open to having a chat about **Anything Web Development Related**.
+I'm Prakhar Jalan, a full stack Developer based in Mumbai, In, Who is passionate about building user-friendly, easy-to-use single page applications, that makes a difference to the lives of those around me. I like to explore new trends and learn new technologies. I'm Currently learning React Native, and looking to collaborate on Open-Source projects, with a goal to be more involved in the Community. I'm also open to having a chat about **Anything Web Development Related**.
 
 
 ## Current Stats
