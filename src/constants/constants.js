@@ -21,9 +21,9 @@ export const projects = [
     title: 'Memory Magic',
     description: "A React based game to sharpen your memory. The players are given 6 pairs of cards shuffled randomly and they have to flip cards over in pairs of 2 and match all the 6 cards in minimum number of moves",
       image: '/images/3.png',
-      tags: ['React', 'WebRTC'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+      tags: ['React'],
+    source: 'https://github.com/jalanprakhar/MemoryGame',
+    visit: 'https://awesome-ptolemy-053acc.netlify.app/',
     id: 2,
   },
   // {
