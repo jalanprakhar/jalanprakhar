@@ -18,7 +18,7 @@ const Hero = (props) => (
           
         </SectionTitle>
         <SectionText>I am
-        passionate about building user-friendly, easy-to-use single page applications, that makes a difference to the lives of those around me. I like to explore new trends and learn new technologies. I'm Currently learning React Native, and looking to collaborate on Open-Source projects
+        passionate about building user-friendly, easy-to-use single page applications, that makes a difference to the lives of those around me. I like to explore new trends and learn new technologies. I'm currently looking to collaborate on Open-Source projects
         </SectionText>
         <a href='https://drive.google.com/file/d/1AkOzJNolE81msxquTET4awdzuUfEKyK5/view?usp=sharing' target='_blank'><Button>Resume</Button></a>
       </LeftSection>
