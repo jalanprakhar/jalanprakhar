@@ -1,29 +1,90 @@
-import React from 'react';
+import React from 'react'
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+import { heroCopy, heroMetrics, heroSignals, profile } from '../../constants/constants'
+import { PrimaryLink, SecondaryLink, SignalPill } from '../../styles/GlobalComponents'
+import {
+  CtaRow,
+  HeroEyebrow,
+  HeroGrid,
+  HeroLead,
+  HeroSection,
+  HeroTitle,
+  HeroVisual,
+  MetricGrid,
+  MetricItem,
+  MetricLabel,
+  MetricValue,
+  Node,
+  PhotoFrame,
+  ProfileImage,
+  RoleLine,
+  SignalRow,
+  StatusBar,
+  StatusLabel,
+  TraceRail,
+} from './HeroStyles'
 
-const Hero = (props) => (
-  <>
-    <Section row nopadding>
-      <LeftSection>
-      
-      <SectionText main center>Hey There,&nbsp; I am</SectionText> 
-        <SectionTitle  main center>
-          Prakhar Jalan
-        </SectionTitle>
-        <SectionTitle  main center>
-          Full-Stack Developer | Competitve Programmer <br />
-          
-        </SectionTitle>
-        <SectionText>I am
-        passionate about building user-friendly, easy-to-use single page applications, that makes a difference to the lives of those around me. I like to explore new trends and learn new technologies. I'm currently looking to collaborate on Open-Source projects
-        </SectionText>
-        <a href='https://drive.google.com/file/d/1AkOzJNolE81msxquTET4awdzuUfEKyK5/view?usp=sharing' target='_blank'><Button>Resume</Button></a>
-      </LeftSection>
-    </Section>
-  </>
-);
+const isPublicResume = profile.resumeUrl && !profile.resumeUrl.startsWith('TODO_')
 
-export default Hero;
+const Hero = () => (
+  <HeroSection aria-labelledby="hero-title">
+    <HeroGrid>
+      <div>
+        <HeroEyebrow>{heroCopy.eyebrow}</HeroEyebrow>
+        <HeroTitle id="hero-title">{profile.name}</HeroTitle>
+        <RoleLine>{heroCopy.role}</RoleLine>
+        <HeroLead>{heroCopy.support}</HeroLead>
+
+        <CtaRow>
+          <PrimaryLink
+            href={isPublicResume ? profile.resumeUrl : '#contact'}
+            target={isPublicResume ? '_blank' : undefined}
+            rel={isPublicResume ? 'noopener noreferrer' : undefined}
+            data-resume-url-status={isPublicResume ? 'ready' : 'todo'}
+          >
+            {heroCopy.primaryCta}
+          </PrimaryLink>
+          <SecondaryLink href={profile.github} target="_blank" rel="noopener noreferrer">
+            {heroCopy.secondaryCta}
+          </SecondaryLink>
+        </CtaRow>
+
+        <SignalRow aria-label="Credibility signals">
+          {heroSignals.map((signal) => (
+            <SignalPill key={signal.label} active={signal.active}>
+              {signal.label}
+            </SignalPill>
+          ))}
+        </SignalRow>
+      </div>
+
+      <HeroVisual aria-label="Profile photo with production system status">
+        <TraceRail aria-hidden="true">
+          <Node active />
+          <Node />
+          <Node />
+        </TraceRail>
+
+        <PhotoFrame>
+          <ProfileImage src={profile.image} alt="Prakhar Jalan" />
+        </PhotoFrame>
+
+        <StatusBar>
+          <StatusLabel>Control plane</StatusLabel>
+          <span>governed runtime</span>
+        </StatusBar>
+
+        <MetricGrid>
+          {heroMetrics.map((metric) => (
+            <MetricItem key={metric.label}>
+              <MetricLabel>{metric.label}</MetricLabel>
+              <MetricValue>{metric.value}</MetricValue>
+            </MetricItem>
+          ))}
+        </MetricGrid>
+      </HeroVisual>
+    </HeroGrid>
+  </HeroSection>
+)
+
+export default Hero
