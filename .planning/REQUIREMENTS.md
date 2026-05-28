@@ -84,6 +84,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-02 | Phase 3 | Pending |
 | QUAL-03 | Phase 3 | Pending |
 | QUAL-04 | Phase 3 | Pending |
+| PUB-01 | v2 | Deferred |
+| PUB-02 | v2 | Deferred |
+| CASE-01 | v2 | Deferred |
+| INT-01 | v2 | Deferred |
 
 **Coverage:**
 - v1 requirements: 16 total
