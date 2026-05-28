@@ -1,6 +1,5 @@
 import Hero from '../components/Hero/Hero'
 import {
-  ContactSection,
   CredentialsSection,
   ExperienceSection,
   SkillsSection,
@@ -16,7 +15,6 @@ const Home = () => {
       <SystemsSection />
       <SkillsSection />
       <CredentialsSection />
-      <ContactSection />
     </Layout>
   )
 }

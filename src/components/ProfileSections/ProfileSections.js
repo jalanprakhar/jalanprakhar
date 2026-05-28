@@ -1,10 +1,8 @@
 import React from 'react'
 
 import {
-  contactHighlights,
   credentials,
   experienceItems,
-  profile,
   skillGroups,
   systemProofs,
 } from '../../constants/constants'
@@ -17,10 +15,6 @@ import {
   SectionLead,
 } from '../../styles/GlobalComponents'
 import {
-  ContactCard,
-  ContactGrid,
-  ContactLink,
-  ContactStatus,
   CredentialColumn,
   CredentialGrid,
   CredentialItem,
@@ -46,8 +40,6 @@ import {
   StackList,
   SystemCard,
 } from './ProfileSectionsStyles'
-
-const isExternal = (href) => href && href.startsWith('http')
 
 export const ExperienceSection = () => {
   const [featuredExperience, ...supportingExperiences] = experienceItems
@@ -253,41 +245,6 @@ export const CredentialsSection = () => (
           </DetailList>
         </CredentialColumn>
       </CredentialGrid>
-    </SectionInner>
-  </PageSection>
-)
-
-export const ContactSection = () => (
-  <PageSection id="contact" tone="surface" bordered>
-    <SectionInner>
-      <SectionHeader>
-        <SectionEyebrow>Contact</SectionEyebrow>
-        <SectionHeading>Build the next production agent system</SectionHeading>
-        <SectionLead>
-          Reach out through email, GitHub, or LinkedIn. Phone number is intentionally not published.
-        </SectionLead>
-        <ContactStatus>Based in {profile.location}</ContactStatus>
-      </SectionHeader>
-
-      <ContactGrid>
-        {contactHighlights.map((item) => (
-          <ContactCard key={item.label}>
-            <RoleMeta>{item.label}</RoleMeta>
-            {item.href ? (
-              <ContactLink
-                href={item.href}
-                target={isExternal(item.href) ? '_blank' : undefined}
-                rel={isExternal(item.href) ? 'noopener noreferrer' : undefined}
-              >
-                {item.title}
-              </ContactLink>
-            ) : (
-              <h3>{item.title}</h3>
-            )}
-            <p>{item.body}</p>
-          </ContactCard>
-        ))}
-      </ContactGrid>
     </SectionInner>
   </PageSection>
 )

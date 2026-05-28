@@ -25,7 +25,7 @@ const isExternal = (href) => href.startsWith('http')
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper id="contact">
       <FooterInner>
         <FooterMeta>
           <LinkTitle>{profile.name}</LinkTitle>

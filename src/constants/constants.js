@@ -203,27 +203,6 @@ export const credentials = {
   ],
 }
 
-export const contactHighlights = [
-  {
-    label: 'Email',
-    title: profile.email,
-    href: `mailto:${profile.email}`,
-    body: 'Direct channel for agentic AI, backend platform, and reliability-focused roles.',
-  },
-  {
-    label: 'GitHub',
-    title: 'github.com/jalanprakhar',
-    href: profile.github,
-    body: 'Code and engineering artifacts for technical review.',
-  },
-  {
-    label: 'LinkedIn',
-    title: 'linkedin.com/in/jalansprakhar',
-    href: profile.linkedin,
-    body: 'Professional background, roles, and hiring conversations.',
-  },
-]
-
 export const shellSections = [
   {
     id: 'experience',
@@ -258,18 +237,6 @@ export const shellSections = [
       kicker: 'Skill group',
       title: group.title,
       body: group.skills.join(', '),
-    })),
-  },
-  {
-    id: 'contact',
-    eyebrow: 'Contact',
-    title: 'Build the next production agent system',
-    lead:
-      'Reach out through email, GitHub, or LinkedIn. Phone number is intentionally not published.',
-    cards: contactHighlights.map((item) => ({
-      kicker: item.label,
-      title: item.title,
-      body: item.body,
     })),
   },
 ]
