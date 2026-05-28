@@ -10,16 +10,30 @@ const pulse = keyframes`
 `
 
 export const HeroSection = styled.section`
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 82vh;
   padding: 64px 0 48px;
   background:
-    linear-gradient(90deg, rgba(15, 118, 110, 0.06) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(21, 21, 21, 0.04) 1px, transparent 1px),
+    linear-gradient(120deg, rgba(34, 211, 238, 0.11), transparent 34%),
+    linear-gradient(90deg, ${({ theme }) => theme.colors.graphLine} 1px, transparent 1px),
+    linear-gradient(0deg, rgba(125, 242, 230, 0.08) 1px, transparent 1px),
     ${({ theme }) => theme.colors.page};
-  background-size: 72px 72px, 72px 72px, auto;
+  background-size: auto, 72px 72px, 72px 72px, auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, transparent 0 42%, rgba(34, 211, 238, 0.14) 42.2%, transparent 42.8%),
+      linear-gradient(35deg, transparent 0 58%, rgba(24, 207, 195, 0.12) 58.2%, transparent 58.8%);
+    opacity: 0.78;
+    pointer-events: none;
+  }
 
   @media ${({ theme }) => theme.breakpoints.md} {
     min-height: auto;
@@ -32,6 +46,8 @@ export const HeroSection = styled.section`
 `
 
 export const HeroGrid = styled.div`
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
   gap: 56px;
@@ -51,7 +67,7 @@ export const HeroGrid = styled.div`
 
 export const HeroEyebrow = styled.p`
   margin: 0 0 16px;
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.cyan};
   font-size: 12px;
   font-weight: 700;
   line-height: 1.3;
@@ -131,6 +147,30 @@ export const HeroVisual = styled.div`
   max-width: 440px;
   margin-left: auto;
 
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px solid ${({ theme }) => theme.colors.softBorder};
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 32px;
+    right: -22px;
+    width: 42%;
+    height: 64%;
+  }
+
+  &::after {
+    left: 20px;
+    bottom: 76px;
+    width: 54%;
+    height: 1px;
+    background: ${({ theme }) => theme.colors.graphLine};
+  }
+
   @media ${({ theme }) => theme.breakpoints.md} {
     margin: 0;
   }
@@ -143,13 +183,16 @@ export const HeroVisual = styled.div`
 
 export const TraceRail = styled.div`
   grid-row: 1 / span 2;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.76);
+  background:
+    linear-gradient(180deg, rgba(24, 207, 195, 0.14), transparent),
+    ${({ theme }) => theme.colors.surfaceElevated};
 
   &::before {
     content: '';
@@ -158,7 +201,8 @@ export const TraceRail = styled.div`
     bottom: 28px;
     left: 23px;
     width: 1px;
-    background: ${({ theme }) => theme.colors.mutedSurface};
+    background: ${({ theme }) => theme.colors.cyan};
+    opacity: 0.48;
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
@@ -173,9 +217,10 @@ export const Node = styled.span`
   z-index: 1;
   width: 12px;
   height: 12px;
-  border: 2px solid ${({ active, theme }) => active ? theme.colors.accent : theme.colors.mutedSurface};
+  border: 2px solid ${({ active, theme }) => active ? theme.colors.cyan : theme.colors.mutedSurface};
   border-radius: 999px;
   background: ${({ active, theme }) => active ? theme.colors.accent : theme.colors.surface};
+  box-shadow: ${({ active, theme }) => active ? `0 0 18px ${theme.colors.glow}` : 'none'};
   animation: ${({ active }) => active ? pulse : 'none'} 2400ms ease-in-out infinite;
 `
 
@@ -185,14 +230,15 @@ export const PhotoFrame = styled.div`
   min-height: 520px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
-  box-shadow: 0 24px 64px rgba(21, 21, 21, 0.12);
+  background: ${({ theme }) => theme.colors.surfaceElevated};
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.36);
 
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    border: 8px solid rgba(255, 255, 255, 0.48);
+    border: 8px solid rgba(7, 16, 18, 0.42);
+    box-shadow: inset 0 0 0 1px rgba(125, 242, 230, 0.14);
     pointer-events: none;
   }
 
@@ -218,7 +264,9 @@ export const StatusBar = styled.div`
   padding: 0 16px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background:
+    linear-gradient(90deg, ${({ theme }) => theme.colors.glow}, transparent),
+    ${({ theme }) => theme.colors.surfaceElevated};
   color: ${({ theme }) => theme.colors.mutedText};
   font-size: 13px;
   font-weight: 600;
@@ -233,7 +281,7 @@ export const StatusBar = styled.div`
 `
 
 export const StatusLabel = styled.strong`
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.cyan};
   font-size: 12px;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -251,7 +299,7 @@ export const MetricItem = styled.div`
   padding: 10px 14px;
   border: 1px solid ${({ theme }) => theme.colors.softBorder};
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.82);
+  background: ${({ theme }) => theme.colors.surfaceElevated};
 `
 
 export const MetricLabel = styled.p`
