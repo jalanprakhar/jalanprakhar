@@ -276,8 +276,8 @@ export const SystemCard = styled.article`
   padding: 24px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
-  box-shadow: 0 16px 40px rgba(21, 21, 21, 0.05);
+  background: ${({ theme }) => theme.colors.surfaceElevated};
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
 
   h3 {
     margin: 10px 0 0;
@@ -319,7 +319,7 @@ export const ProofList = styled.ul`
     min-height: 32px;
     padding: 7px 10px;
     border-left: 2px solid ${({ theme }) => theme.colors.accent};
-    background: ${({ theme }) => theme.colors.page};
+    background: ${({ theme }) => theme.colors.surface};
     color: ${({ theme }) => theme.colors.text};
     font-size: 13px;
     font-weight: 700;
@@ -346,7 +346,7 @@ export const SkillCard = styled.article`
   padding: 24px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.surfaceElevated};
 
   h3 {
     margin: 0;
@@ -382,7 +382,7 @@ export const SkillList = styled.ul`
     padding: 6px 10px;
     border: 1px solid ${({ theme }) => theme.colors.softBorder};
     border-radius: 8px;
-    background: ${({ theme }) => theme.colors.page};
+    background: ${({ theme }) => theme.colors.surface};
     color: ${({ theme }) => theme.colors.text};
     font-size: 12px;
     font-weight: 700;
@@ -404,7 +404,7 @@ export const CredentialColumn = styled.article`
   padding: 24px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.surfaceElevated};
 
   h3 {
     margin: 0 0 18px;
@@ -457,7 +457,7 @@ export const DetailList = styled.ul`
 
 export const ContactGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 
   @media ${({ theme }) => theme.breakpoints.lg} {
@@ -474,7 +474,9 @@ export const ContactCard = styled.article`
   padding: 24px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background:
+    linear-gradient(145deg, rgba(34, 211, 238, 0.08), transparent 44%),
+    ${({ theme }) => theme.colors.surfaceElevated};
 
   h3,
   a {
@@ -506,4 +508,19 @@ export const ContactLink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.colors.accent};
   }
+`
+
+export const ContactStatus = styled.p`
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  margin: 16px 0 0;
+  padding: 6px 12px;
+  border: 1px solid ${({ theme }) => theme.colors.softBorder};
+  border-radius: 999px;
+  background: ${({ theme }) => theme.colors.surfaceElevated};
+  color: ${({ theme }) => theme.colors.cyan};
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
 `

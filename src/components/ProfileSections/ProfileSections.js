@@ -4,6 +4,7 @@ import {
   contactHighlights,
   credentials,
   experienceItems,
+  profile,
   skillGroups,
   systemProofs,
 } from '../../constants/constants'
@@ -19,6 +20,7 @@ import {
   ContactCard,
   ContactGrid,
   ContactLink,
+  ContactStatus,
   CredentialColumn,
   CredentialGrid,
   CredentialItem,
@@ -264,6 +266,7 @@ export const ContactSection = () => (
         <SectionLead>
           Reach out through email, GitHub, or LinkedIn. Phone number is intentionally not published.
         </SectionLead>
+        <ContactStatus>Based in {profile.location}</ContactStatus>
       </SectionHeader>
 
       <ContactGrid>

@@ -222,11 +222,6 @@ export const contactHighlights = [
     href: profile.linkedin,
     body: 'Professional background, roles, and hiring conversations.',
   },
-  {
-    label: 'Location',
-    title: profile.location,
-    body: 'Based in Bangalore, India.',
-  },
 ]
 
 export const shellSections = [
