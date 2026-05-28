@@ -69,7 +69,6 @@ Plans:
   4. Desktop and mobile layouts avoid incoherent overlap, excessive empty areas, clipped text, and one-note visual treatment.
 
 **Plans**: 1 plan
-
 Plans:
 
 - [ ] 03-01: Redesign the active portfolio into a darker, denser agentic UI and fix weak content-card balance.
