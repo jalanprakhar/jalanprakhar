@@ -6,8 +6,7 @@ export const profile = {
   github: 'https://github.com/jalanprakhar',
   linkedin: 'https://www.linkedin.com/in/jalansprakhar',
   image: '/images/profile.jpeg',
-  // TODO: Replace with a stable public resume URL before launch.
-  resumeUrl: 'TODO_PUBLIC_RESUME_URL',
+  resumeUrl: 'https://drive.google.com/file/d/1OJEBwtEi2GmPiqtw2Y-9HJsaa6Z0vk9O/view?usp=drivesdk',
 }
 
 export const navItems = [
