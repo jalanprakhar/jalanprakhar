@@ -1,281 +1,262 @@
 import styled from 'styled-components'
 
-export const Section = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
+export const PageSection = styled.section`
+  width: 100%;
+  padding: ${({ compact }) => compact ? '48px 0' : '72px 0'};
+  background: ${({ tone, theme }) => tone === 'surface' ? theme.colors.surface : theme.colors.page};
+  border-top: ${({ bordered, theme }) => bordered ? `1px solid ${theme.colors.softBorder}` : '0'};
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    padding: ${({ compact }) => compact ? '40px 0' : '56px 0'};
+  }
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    padding: ${({ compact }) => compact ? '32px 0' : '48px 0'};
+  }
+`
+
+export const SectionInner = styled.div`
+  width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
-  position: relative;
-  overflow: hidden;
-  grid-template-columns: 1fr 1fr;
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
-    flex-direction: column;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
-    width: calc(100vw - 32px);
-    flex-direction: column;
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    width: min(100% - 40px, 1120px);
   }
 `
 
-export const SectionTitle = styled.h2`
-  font-weight: 800;
-  font-size: ${(props) => props.main ? '65px' : '56px'};
-  line-height: ${(props) => props.main ? '72px' : '56px'};
-  width: max-content;
-  max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
-  padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+export const SectionHeader = styled.div`
+  max-width: 720px;
+  margin-bottom: 32px;
 
-  @media ${props => props.theme.breakpoints.md}{
-    font-size: ${(props) => props.main ? '56px' : '48px'};
-    line-height: ${(props) => props.main ? '56px' : '48px'};
-    margin-bottom: 12px;
-    padding: ${(props) => props.main ? '40px 0 12px' : '0'};
-  }
-
-  @media ${props => props.theme.breakpoints.sm}{
-    font-size: 32px;
-    line-height: 40px;
-    font-size: ${(props) => props.main ? '28px' : '32px'};
-    line-height: ${(props) => props.main ? '32px' : '40px'};
-    margin-bottom: 8px;
-    padding: ${(props) => props.main ? '16px 0 8px' : '0'};
-    max-width: 100%;
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    margin-bottom: 24px;
   }
 `
 
-export const SectionText = styled.p`
-  max-width: 800px;
-  font-size: 24px;
-  line-height: 40px;
-  font-weight: 300;
-  padding-bottom: 3.6rem;
-  color: rgba(255, 255, 255, 0.5);
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    max-width: 670px;
-    font-size: 20px;
-    line-height: 32px;
-    padding-bottom: 24px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
-    padding-bottom: 16px;
-  }
-`
-
-export const SectionDivider = styled.div`
-
-  width: 64px;
-  height: 6px;
-  border-radius: 10px;
-  background-color: #fff;
-  background: ${(props) => props.colorAlt ? 
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
-
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 48px;
-    height: 4px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 32px;
-    height: 2px;
-  }
-`
-export const SectionSubText = styled.p`
-  max-width: 800px;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
-
-@media ${(props) => props.theme.breakpoints.md} {
-    max-width: 672px;
-    font-size: 16px;
-    line-height: 25px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
-    line-height: 22px;
-  }
-`
-export const SecondaryBtn = styled.button`
-  color: #FFF;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 999px;
-  padding: 16px 24px;
+export const SectionEyebrow = styled.p`
+  margin: 0 0 12px;
+  color: ${({ theme }) => theme.colors.accent};
+  font-size: 12px;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 16px;
-  width: fit-content;
-  margin-top: 32px;
-  margin-bottom: 80px;
-  cursor: pointer;
-  transition: 0.4s ease;
-  &:focus {
-    outline: none;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: uppercase;
+`
+
+export const SectionHeading = styled.h2`
+  margin: 0;
+  color: ${({ theme }) => theme.colors.text};
+  font-size: ${({ main }) => main ? '64px' : '40px'};
+  font-weight: 800;
+  line-height: ${({ main }) => main ? '1.02' : '1.12'};
+  letter-spacing: 0;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    font-size: ${({ main }) => main ? '48px' : '34px'};
   }
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: ${({ main }) => main ? '42px' : '30px'};
+    line-height: ${({ main }) => main ? '1.08' : '1.16'};
+  }
+`
+
+export const SectionLead = styled.p`
+  max-width: 760px;
+  margin: ${({ tight }) => tight ? '12px 0 0' : '16px 0 0'};
+  color: ${({ theme }) => theme.colors.mutedText};
+  font-size: ${({ large }) => large ? '20px' : '16px'};
+  font-weight: 400;
+  line-height: ${({ large }) => large ? '1.6' : '1.65'};
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+`
+
+export const ShellGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(${({ columns }) => columns || 3}, minmax(0, 1fr));
+  gap: 16px;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    grid-template-columns: 1fr;
+  }
+`
+
+export const SectionCard = styled.article`
+  min-height: ${({ compact }) => compact ? '132px' : '168px'};
+  padding: 24px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.surface};
+  box-shadow: 0 18px 44px rgba(21, 21, 21, 0.05);
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    min-height: auto;
+    padding: 20px;
+  }
+`
+
+export const CardKicker = styled.p`
+  margin: 0 0 10px;
+  color: ${({ theme }) => theme.colors.warmSignal};
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: uppercase;
+`
+
+export const CardTitle = styled.h3`
+  margin: 0;
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0;
+`
+
+export const CardText = styled.p`
+  margin: 12px 0 0;
+  color: ${({ theme }) => theme.colors.mutedText};
+  font-size: 15px;
+  line-height: 1.65;
+`
+
+export const SignalPill = styled.span`
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: 1px solid ${({ active, theme }) => active ? 'rgba(15, 118, 110, 0.28)' : theme.colors.border};
+  border-radius: 999px;
+  background: ${({ active }) => active ? 'rgba(15, 118, 110, 0.08)' : 'rgba(255, 255, 255, 0.72)'};
+  color: ${({ active, theme }) => active ? theme.colors.accent : theme.colors.mutedText};
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+`
+
+export const PrimaryLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 148px;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 1px solid ${({ theme }) => theme.colors.accent};
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.accent};
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 
   &:hover {
-    color: #0f1624;
-    background: #fff;
-    border: 1px solid #fff;
+    background: #0B5F59;
+    border-color: #0B5F59;
+    transform: translateY(-1px);
   }
 
-  &:active {
-    background: #e0e4eb;
-    border: 1px solid #304169;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-  }
-
-  @media ${(props) => props.theme.breakpoints.md}{
-    margin-top: 24px; 
-    margin-bottom: 64px;
-    padding: 16px 24px;
-    width: fit-content;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin-top: 16px;
-    margin-bottom: 40px;
-    padding: 8px 16px;
+  @media ${({ theme }) => theme.breakpoints.sm} {
     width: 100%;
-    font-size: 14px;
-    line-height: 16px;
   }
+`
+
+export const SecondaryLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 136px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.surface};
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.accent};
+    transform: translateY(-1px);
+  }
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    width: 100%;
+  }
+`
+
+export const Section = styled(PageSection)``
+export const SectionTitle = styled(SectionHeading)``
+export const SectionText = styled(SectionLead)``
+export const SectionSubText = styled(SectionLead)``
+
+export const SectionDivider = styled.div`
+  width: 64px;
+  height: 2px;
+  margin: ${({ divider }) => divider ? '32px 0' : '16px 0'};
+  border-radius: 2px;
+  background: ${({ colorAlt, theme }) => colorAlt ? theme.colors.warmSignal : theme.colors.accent};
+`
+
+export const SecondaryBtn = styled.button`
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.surface};
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
 `
 
 export const ButtonBack = styled.div`
-  width: ${({ alt }) => alt ? '150px' : '262px'};
-  height: ${({ alt }) => alt ? '52px' : '64px'};
-  border-radius: 50px;
-  font-size: ${({ alt }) => alt ? '20px' : '24px'};
-  font-weight: 600;
-  display: flex;
+  position: relative;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
+  width: ${({ alt }) => alt ? '150px' : '180px'};
+  height: ${({ alt }) => alt ? '48px' : '52px'};
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.accent};
   color: #fff;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
-  cursor: pointer;
-  transition: 0.5s ease;
-  position: relative;
-  overflow: hidden;
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: ${({ alt }) => alt ? '150px' : '184px'};
-    height: ${({ alt }) => alt ? '52px' : '48px'};
-    font-size: ${({ alt }) => alt ? '20px' : '16px'};
-    margin-bottom: ${({ alt }) => alt ? '0' : '64px'};
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 100%;
-    height: 32px;
-    font-size: 14px;
-    margin-bottom: ${({ alt }) => alt ? '0' : '32px'};
-  }
 `
 
 export const ButtonFront = styled.button`
-  border: none;
-  border-radius: 50px;
-  color: #fff;
-  display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: ${({ alt }) => alt ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
-  opacity: ${({ disabled }) => disabled ? '.5' : '1'};
-  transition: .4s ease;
-  font-size: ${({ alt }) => alt ? '20px' : '24px'};
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
+  inset: 0;
+  border: 0;
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.accent};
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  box-shadow: ${({ disabled }) => disabled ? 'inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3)' : 'none'};
-
-  &:hover {
-    opacity: 0;
-  }
-  &:focus {
-    outline: none;
-  }
-  &:active {
-    opacity: 1;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-  }
-
-  &:disabled{
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
-    opacity: 0.5;
-    box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15), inset 0px 0px 4px rgba(20, 20, 55, 0.3);
-  }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: ${({ alt }) => alt ? '20px' : '16px'};
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
-  }
 `
 
 export const LinkContainer = styled.div`
-  margin-left: ${({ large }) => large ? '24px' : '16px'};
-  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  border-radius: 50px;
-  padding: 8px;
-
-  &:hover {
-    background-color: #212d45;
-    transform: scale(1.2);
-    cursor: pointer;
-  }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    margin-left: ${({ large }) => large ? '16px' : '8px'};
-
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin-left: ${({ large }) => large ? '0' : '8px'};
-  }
+  margin-left: ${({ large }) => large ? '16px' : '8px'};
+  border-radius: 8px;
 `
 
 export const LinkIconImg = styled.div`
-  display: flex;  
+  display: flex;
   height: ${({ large }) => large ? '32px' : '24px'};
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    height: ${({ nav }) => nav ? '16px' : '24px'};
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    height: ${({ large }) => large ? '32px' : '16px'};
-  }
 `

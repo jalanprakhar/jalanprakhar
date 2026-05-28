@@ -1,18 +1,36 @@
 export default {
-  // Temp fonts
   fonts: {
-    title: "Space Grotesk, sans-serif",
-    main: "Space Grotesk, sans-serif"
+    title: 'Space Grotesk, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    main: 'Space Grotesk, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
   },
-  // Colors for layout
   colors: {
-    primary1: "hsl(204,23.8%,95.9%)",
-    background1: "#0F1624",
-    accent1: "hsl(34.9,98.6%,72.9%)",
-    button: "hsl(205.1,100%,36.1%)",
-    background2: "hsl(232.7,27.3%,23.7%)",
+    page: '#F6F7F9',
+    text: '#151515',
+    surface: '#FFFFFF',
+    mutedSurface: '#E7EAEE',
+    mutedText: '#5D6673',
+    accent: '#0F766E',
+    warmSignal: '#B45309',
+    destructive: '#B42318',
+    border: 'rgba(21, 21, 21, 0.12)',
+    softBorder: 'rgba(21, 21, 21, 0.08)',
+
+    primary1: '#151515',
+    background1: '#F6F7F9',
+    accent1: '#0F766E',
+    button: '#0F766E',
+    background2: '#FFFFFF',
   },
-  // Breakpoints for responsive design
+  spacing: {
+    xs: '4px',
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '32px',
+    '2xl': '48px',
+    '3xl': '64px',
+    '4xl': '96px',
+  },
   breakpoints: {
     sm: 'screen and (max-width: 640px)',
     md: 'screen and (max-width: 768px)',
