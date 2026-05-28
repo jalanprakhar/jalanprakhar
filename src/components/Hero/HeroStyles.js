@@ -227,7 +227,8 @@ export const Node = styled.span`
 export const PhotoFrame = styled.div`
   position: relative;
   overflow: hidden;
-  min-height: 520px;
+  height: clamp(440px, 58vh, 560px);
+  aspect-ratio: 3 / 4;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
   background: ${({ theme }) => theme.colors.surfaceElevated};
@@ -243,16 +244,17 @@ export const PhotoFrame = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    min-height: 420px;
+    height: clamp(380px, 62vh, 500px);
   }
 `
 
 export const ProfileImage = styled.img`
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: inherit;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 28%;
 `
 
 export const StatusBar = styled.div`
