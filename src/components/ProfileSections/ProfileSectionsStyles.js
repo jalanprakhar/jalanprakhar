@@ -13,16 +13,11 @@ export const ExperienceGrid = styled.div`
 export const RoleCard = styled.article`
   display: flex;
   flex-direction: column;
-  min-height: ${({ featured }) => featured ? '420px' : 'auto'};
   padding: 24px;
-  border: 1px solid ${({ featured, theme }) => featured ? 'rgba(15, 118, 110, 0.28)' : theme.colors.border};
+  border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
-  box-shadow: ${({ featured }) => featured ? '0 22px 56px rgba(21, 21, 21, 0.08)' : '0 16px 36px rgba(21, 21, 21, 0.04)'};
-
-  &:first-child {
-    grid-row: span 2;
-  }
+  background: ${({ theme }) => theme.colors.surfaceElevated};
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
 
   > p {
     margin: 16px 0 0;
@@ -31,14 +26,109 @@ export const RoleCard = styled.article`
     line-height: 1.65;
   }
 
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    padding: 20px;
+  }
+`
+
+export const OracleFeature = styled.article`
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, ${({ theme }) => theme.colors.glow}, transparent 42%),
+    ${({ theme }) => theme.colors.surfaceElevated};
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.28);
+
   @media ${({ theme }) => theme.breakpoints.lg} {
-    &:first-child {
-      grid-row: auto;
-    }
+    grid-template-columns: 1fr;
   }
 
   @media ${({ theme }) => theme.breakpoints.sm} {
-    min-height: auto;
+    padding: 20px;
+  }
+`
+
+export const OracleNarrative = styled.div`
+  min-width: 0;
+`
+
+export const OracleBody = styled.p`
+  margin: 16px 0 0;
+  color: ${({ theme }) => theme.colors.mutedText};
+  font-size: 15px;
+  line-height: 1.65;
+`
+
+export const OracleProofGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
+    grid-template-columns: 1fr;
+  }
+`
+
+export const ProofPanel = styled.div`
+  min-height: 128px;
+  padding: 16px;
+  border: 1px solid ${({ theme }) => theme.colors.softBorder};
+  border-radius: 8px;
+  background:
+    linear-gradient(140deg, rgba(34, 211, 238, 0.08), transparent 48%),
+    ${({ theme }) => theme.colors.surface};
+
+  span {
+    display: inline-flex;
+    color: ${({ theme }) => theme.colors.cyan};
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  strong {
+    display: block;
+    margin-top: 8px;
+    color: ${({ theme }) => theme.colors.warmSignal};
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  p {
+    margin: 10px 0 0;
+    color: ${({ theme }) => theme.colors.mutedText};
+    font-size: 13px;
+    line-height: 1.55;
+  }
+`
+
+export const SupportingTimeline = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+
+  @media ${({ theme }) => theme.breakpoints.md} {
+    grid-template-columns: 1fr;
+  }
+`
+
+export const SupportingRoleCard = styled.article`
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid ${({ theme }) => theme.colors.softBorder};
+  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.surface};
+
+  @media ${({ theme }) => theme.breakpoints.sm} {
     padding: 20px;
   }
 `
@@ -111,9 +201,9 @@ export const MetricList = styled.ul`
     align-items: center;
     min-height: 32px;
     padding: 6px 10px;
-    border: 1px solid rgba(180, 83, 9, 0.22);
+    border: 1px solid rgba(245, 158, 11, 0.24);
     border-radius: 8px;
-    background: rgba(180, 83, 9, 0.06);
+    background: rgba(245, 158, 11, 0.08);
     color: ${({ theme }) => theme.colors.warmSignal};
     font-size: 12px;
     font-weight: 800;
@@ -161,7 +251,7 @@ export const StackList = styled.ul`
     padding: 6px 10px;
     border: 1px solid ${({ theme }) => theme.colors.softBorder};
     border-radius: 8px;
-    background: ${({ theme }) => theme.colors.page};
+    background: ${({ theme }) => theme.colors.surface};
     color: ${({ theme }) => theme.colors.text};
     font-size: 12px;
     font-weight: 700;

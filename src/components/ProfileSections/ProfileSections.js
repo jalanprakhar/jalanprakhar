@@ -24,15 +24,20 @@ import {
   CredentialItem,
   CredentialList,
   DetailList,
-  ExperienceGrid,
   HighlightGrid,
   ImpactList,
   MetaRow,
   MetricList,
+  OracleBody,
+  OracleFeature,
+  OracleNarrative,
+  OracleProofGrid,
+  ProofPanel,
   ProofList,
-  RoleCard,
   RoleHeader,
   RoleMeta,
+  SupportingRoleCard,
+  SupportingTimeline,
   SkillCard,
   SkillGrid,
   SkillList,
@@ -42,57 +47,107 @@ import {
 
 const isExternal = (href) => href && href.startsWith('http')
 
-export const ExperienceSection = () => (
-  <PageSection id="experience" tone="surface" bordered>
-    <SectionInner>
-      <SectionHeader>
-        <SectionEyebrow>Experience</SectionEyebrow>
-        <SectionHeading>Professional systems, in reverse chronological order</SectionHeading>
-        <SectionLead>
-          Resume-backed roles focused on agentic AI systems, backend platforms, and operational impact.
-        </SectionLead>
-      </SectionHeader>
+export const ExperienceSection = () => {
+  const [featuredExperience, ...supportingExperiences] = experienceItems
 
-      <ExperienceGrid>
-        {experienceItems.map((item, index) => (
-          <RoleCard key={`${item.company}-${item.role}`} featured={index === 0}>
+  return (
+    <PageSection id="experience" tone="surface" bordered>
+      <SectionInner>
+        <SectionHeader>
+          <SectionEyebrow>Experience</SectionEyebrow>
+          <SectionHeading>Professional systems, in reverse chronological order</SectionHeading>
+          <SectionLead>
+            Resume-backed roles focused on agentic AI systems, backend platforms, and operational impact.
+          </SectionLead>
+        </SectionHeader>
+
+        <OracleFeature>
+          <OracleNarrative>
             <RoleHeader>
               <div>
-                <RoleMeta>{item.emphasis}</RoleMeta>
-                <h3>{item.company}</h3>
-                <p>{item.role}</p>
+                <RoleMeta>{featuredExperience.emphasis}</RoleMeta>
+                <h3>{featuredExperience.company}</h3>
+                <p>{featuredExperience.role}</p>
               </div>
               <MetaRow>
-                <span>{item.period}</span>
-                <span>{item.location}</span>
+                <span>{featuredExperience.period}</span>
+                <span>{featuredExperience.location}</span>
               </MetaRow>
             </RoleHeader>
 
-            <p>{item.summary}</p>
+            <OracleBody>{featuredExperience.summary}</OracleBody>
 
-            <MetricList aria-label={`${item.company} impact metrics`}>
-              {item.metrics.map((metric) => (
+            <MetricList aria-label={`${featuredExperience.company} impact metrics`}>
+              {featuredExperience.metrics.map((metric) => (
                 <li key={metric}>{metric}</li>
               ))}
             </MetricList>
 
             <ImpactList>
-              {item.impact.map((impact) => (
+              {featuredExperience.impact.map((impact) => (
                 <li key={impact}>{impact}</li>
               ))}
             </ImpactList>
 
-            <StackList aria-label={`${item.company} stack`}>
-              {item.stack.map((tool) => (
+            <StackList aria-label={`${featuredExperience.company} stack`}>
+              {featuredExperience.stack.map((tool) => (
                 <li key={tool}>{tool}</li>
               ))}
             </StackList>
-          </RoleCard>
-        ))}
-      </ExperienceGrid>
-    </SectionInner>
-  </PageSection>
-)
+          </OracleNarrative>
+
+          <OracleProofGrid aria-label="Oracle MTS-1 proof panels">
+            {featuredExperience.proofPanels.map((panel) => (
+              <ProofPanel key={`${panel.label}-${panel.value}`}>
+                <span>{panel.label}</span>
+                <strong>{panel.value}</strong>
+                <p>{panel.description}</p>
+              </ProofPanel>
+            ))}
+          </OracleProofGrid>
+        </OracleFeature>
+
+        <SupportingTimeline aria-label="Supporting professional timeline">
+          {supportingExperiences.map((item) => (
+            <SupportingRoleCard key={`${item.company}-${item.role}`}>
+              <RoleHeader>
+                <div>
+                  <RoleMeta>{item.emphasis}</RoleMeta>
+                  <h3>{item.company}</h3>
+                  <p>{item.role}</p>
+                </div>
+                <MetaRow>
+                  <span>{item.period}</span>
+                  <span>{item.location}</span>
+                </MetaRow>
+              </RoleHeader>
+
+              <OracleBody>{item.summary}</OracleBody>
+
+              <MetricList aria-label={`${item.company} impact metrics`}>
+                {item.metrics.map((metric) => (
+                  <li key={metric}>{metric}</li>
+                ))}
+              </MetricList>
+
+              <ImpactList>
+                {item.impact.map((impact) => (
+                  <li key={impact}>{impact}</li>
+                ))}
+              </ImpactList>
+
+              <StackList aria-label={`${item.company} stack`}>
+                {item.stack.map((tool) => (
+                  <li key={tool}>{tool}</li>
+                ))}
+              </StackList>
+            </SupportingRoleCard>
+          ))}
+        </SupportingTimeline>
+      </SectionInner>
+    </PageSection>
+  )
+}
 
 export const SystemsSection = () => (
   <PageSection id="systems" bordered>

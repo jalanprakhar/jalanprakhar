@@ -55,6 +55,43 @@ export const experienceItems = [
       'Building production agentic AI infrastructure for governed orchestration, reliability operations, and leadership-level agent control.',
     metrics: ['Python + LangGraph', '500+ Sev2 incidents', '30% MTTR reduction', '4.2/5 satisfaction'],
     stack: ['Python', 'LangGraph', 'FastAPI', 'LLM orchestration', 'OCI', 'Kubernetes'],
+    proofPanels: [
+      {
+        label: 'Orchestration',
+        value: 'LangGraph',
+        description: 'Centralized agentic harness for deterministic policy-driven workflows.',
+      },
+      {
+        label: 'Incident scale',
+        value: '500+ Sev2',
+        description: 'Specialized DevOps agent used by Tier-0 / OKE teams for severity triage.',
+      },
+      {
+        label: 'Reliability lift',
+        value: '30% MTTR',
+        description: 'Reduced mean time to resolution across high-priority operational incidents.',
+      },
+      {
+        label: 'Operator signal',
+        value: '4.2/5',
+        description: 'Average satisfaction from agent users in production support workflows.',
+      },
+      {
+        label: 'Control plane',
+        value: 'FastAPI',
+        description: 'High-performance management layer for agents at operational scale.',
+      },
+      {
+        label: 'Governance',
+        value: 'Policy controls',
+        description: 'Hallucination-risk mitigation, deterministic paths, and tool-call control.',
+      },
+      {
+        label: 'Guardrails',
+        value: 'Safety gates',
+        description: 'Cost control and leadership-level visibility for production agent systems.',
+      },
+    ],
     impact: [
       'Architected a centralized agentic harness platform with deterministic policy-driven workflows for governance, hallucination-risk mitigation, LLM tool-call control, and cost control.',
       'Engineered a specialized DevOps agent used by Tier-0 / OKE teams to triage 500+ Sev2 incidents, reducing MTTR by 30% while averaging 4.2/5 user satisfaction.',
