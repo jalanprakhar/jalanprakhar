@@ -2,7 +2,7 @@
 
 ## Overview
 
-Rebuild the existing college-era Next.js portfolio into a polished professional portfolio for an agentic AI engineer. The roadmap first establishes the new executive visual shell and first-viewport positioning, then replaces the old content with resume-driven professional storytelling, and finally cleans up code quality, accessibility, package management, and launch readiness.
+Rebuild the existing college-era Next.js portfolio into a polished professional portfolio for an agentic AI engineer. The roadmap first establishes the new executive positioning and resume-driven content, then tightens the active UI into a darker, more agentic interface, and finally cleans up code quality, accessibility, package management, and launch readiness.
 
 ## Phases
 
@@ -15,7 +15,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Executive Portfolio Shell** - Establish the new visual system, first viewport, and responsive page structure. (completed 2026-05-28)
 - [x] **Phase 2: Resume-Driven Content Rebuild** - Replace old content with professional experience, skills, achievements, and contact architecture. (completed 2026-05-28)
-- [ ] **Phase 3: Quality and Launch Readiness** - Clean dead code, fix accessibility/link safety, choose package manager, and add build checks.
+- [ ] **Phase 3: Dark Agentic UI Refinement** - Rework the active portfolio into a darker, denser, more agentic interface and fix weak content-card presentation.
+- [ ] **Phase 4: Quality and Launch Readiness** - Clean dead code, fix accessibility/link safety, choose package manager, and add build checks.
 
 ## Phase Details
 
@@ -55,10 +56,28 @@ Plans:
 
 - [x] 02-01: Replace student-era content with resume-derived professional sections and centralized content data.
 
-### Phase 3: Quality and Launch Readiness
+### Phase 3: Dark Agentic UI Refinement
+
+**Goal**: Rework the active portfolio into a darker, denser, more agentic interface and fix weak content-card presentation.
+**Depends on**: Phase 2
+**Requirements**: [DARK-01, DARK-02, DARK-03, DARK-04]
+**Success Criteria** (what must be TRUE):
+
+  1. The active homepage uses a polished dark-mode visual system with restrained but clearer agentic/system cues.
+  2. The Oracle MTS-1 experience card no longer has large blank space and presents the current-role story with better density, rhythm, and hierarchy.
+  3. Contact/location presentation feels intentional; location is not an awkward standalone card and contact options remain safe and centralized.
+  4. Desktop and mobile layouts avoid incoherent overlap, excessive empty areas, clipped text, and one-note visual treatment.
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 03-01: Redesign the active portfolio into a darker, denser agentic UI and fix weak content-card balance.
+
+### Phase 4: Quality and Launch Readiness
 
 **Goal**: Clean dead code, fix accessibility/link safety, choose package manager, and add build checks.
-**Depends on**: Phase 2
+**Depends on**: Phase 3
 **Requirements**: [QUAL-01, QUAL-02, QUAL-03, QUAL-04]
 **Success Criteria** (what must be TRUE):
 
@@ -71,15 +90,16 @@ Plans:
 
 Plans:
 
-- [ ] 03-01: Prepare the rebuilt portfolio for launch with cleanup, accessibility, package, and verification work.
+- [ ] 04-01: Prepare the rebuilt portfolio for launch with cleanup, accessibility, package, and verification work.
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Executive Portfolio Shell | 1/1 | Complete    | 2026-05-28 |
 | 2. Resume-Driven Content Rebuild | 1/1 | Complete    | 2026-05-28 |
-| 3. Quality and Launch Readiness | 0/1 | Not started | - |
+| 3. Dark Agentic UI Refinement | 0/1 | Not started | - |
+| 4. Quality and Launch Readiness | 0/1 | Not started | - |

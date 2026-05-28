@@ -29,6 +29,13 @@
 - [x] **CONT-02**: Skills are grouped around Agentic AI, backend/platform, cloud/devops, and fundamentals.
 - [x] **CONT-03**: Contact/social links are centralized and safe for reuse.
 
+### Dark Agentic UI Refinement
+
+- [ ] **DARK-01**: Active homepage uses a polished dark-mode visual system with stronger but restrained agentic/system cues.
+- [ ] **DARK-02**: Oracle MTS-1/current-role presentation is denser and visually balanced, with no large empty space in the featured card.
+- [ ] **DARK-03**: Contact and location presentation feels intentional, not like an awkward standalone location card.
+- [ ] **DARK-04**: Desktop and mobile layouts avoid incoherent overlap, clipped text, excessive blank areas, and one-note visual treatment.
+
 ### Code Quality
 
 - [ ] **QUAL-01**: Remove dead/sample code including empty CSS, unused exports where practical, sample API route, and misspelled component path.
@@ -80,18 +87,22 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
 | CONT-03 | Phase 2 | Complete |
-| QUAL-01 | Phase 3 | Pending |
-| QUAL-02 | Phase 3 | Pending |
-| QUAL-03 | Phase 3 | Pending |
-| QUAL-04 | Phase 3 | Pending |
+| DARK-01 | Phase 3 | Pending |
+| DARK-02 | Phase 3 | Pending |
+| DARK-03 | Phase 3 | Pending |
+| DARK-04 | Phase 3 | Pending |
+| QUAL-01 | Phase 4 | Pending |
+| QUAL-02 | Phase 4 | Pending |
+| QUAL-03 | Phase 4 | Pending |
+| QUAL-04 | Phase 4 | Pending |
 | PUB-01 | v2 | Deferred |
 | PUB-02 | v2 | Deferred |
 | CASE-01 | v2 | Deferred |
 | INT-01 | v2 | Deferred |
 
 **Coverage:**
-- v1 requirements: 16 total
-- Mapped to phases: 16
+- v1 requirements: 20 total
+- Mapped to phases: 20
 - Unmapped: 0
 
 ---
