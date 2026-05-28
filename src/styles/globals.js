@@ -55,7 +55,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::selection {
-    background: rgba(15, 118, 110, 0.18);
+    background: rgba(24, 207, 195, 0.24);
     color: ${props => props.theme.colors.text};
   }
 

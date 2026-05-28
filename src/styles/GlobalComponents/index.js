@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const PageSection = styled.section`
+  position: relative;
   width: 100%;
   padding: ${({ compact }) => compact ? '48px 0' : '72px 0'};
   background: ${({ tone, theme }) => tone === 'surface' ? theme.colors.surface : theme.colors.page};
@@ -35,7 +36,7 @@ export const SectionHeader = styled.div`
 
 export const SectionEyebrow = styled.p`
   margin: 0 0 12px;
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.cyan};
   font-size: 12px;
   font-weight: 600;
   line-height: 1.3;
@@ -94,8 +95,8 @@ export const SectionCard = styled.article`
   padding: 24px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
-  box-shadow: 0 18px 44px rgba(21, 21, 21, 0.05);
+  background: ${({ theme }) => theme.colors.surfaceElevated};
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
 
   @media ${({ theme }) => theme.breakpoints.sm} {
     min-height: auto;
@@ -134,10 +135,10 @@ export const SignalPill = styled.span`
   align-items: center;
   min-height: 32px;
   padding: 6px 12px;
-  border: 1px solid ${({ active, theme }) => active ? 'rgba(15, 118, 110, 0.28)' : theme.colors.border};
+  border: 1px solid ${({ active, theme }) => active ? theme.colors.border : theme.colors.softBorder};
   border-radius: 999px;
-  background: ${({ active }) => active ? 'rgba(15, 118, 110, 0.08)' : 'rgba(255, 255, 255, 0.72)'};
-  color: ${({ active, theme }) => active ? theme.colors.accent : theme.colors.mutedText};
+  background: ${({ active, theme }) => active ? theme.colors.glow : 'rgba(16, 33, 38, 0.72)'};
+  color: ${({ active, theme }) => active ? theme.colors.text : theme.colors.mutedText};
   font-size: 12px;
   font-weight: 600;
   line-height: 1.3;
@@ -154,15 +155,15 @@ export const PrimaryLink = styled.a`
   border: 1px solid ${({ theme }) => theme.colors.accent};
   border-radius: 8px;
   background: ${({ theme }) => theme.colors.accent};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.page};
   font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 
   &:hover {
-    background: #0B5F59;
-    border-color: #0B5F59;
+    background: ${({ theme }) => theme.colors.cyan};
+    border-color: ${({ theme }) => theme.colors.cyan};
     transform: translateY(-1px);
   }
 
@@ -180,7 +181,7 @@ export const SecondaryLink = styled.a`
   padding: 0 18px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.surfaceElevated};
   color: ${({ theme }) => theme.colors.text};
   font-size: 15px;
   font-weight: 700;
@@ -216,7 +217,7 @@ export const SecondaryBtn = styled.button`
   padding: 0 18px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.surfaceElevated};
   color: ${({ theme }) => theme.colors.text};
   font-size: 15px;
   font-weight: 700;
@@ -232,7 +233,7 @@ export const ButtonBack = styled.div`
   height: ${({ alt }) => alt ? '48px' : '52px'};
   border-radius: 8px;
   background: ${({ theme }) => theme.colors.accent};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.page};
   opacity: ${({ disabled }) => disabled ? '.5' : '1'};
 `
 
@@ -242,7 +243,7 @@ export const ButtonFront = styled.button`
   border: 0;
   border-radius: 8px;
   background: ${({ theme }) => theme.colors.accent};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.page};
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;

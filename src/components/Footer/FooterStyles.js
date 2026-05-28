@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const FooterWrapper = styled.footer`
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.border};
-  background: ${({ theme }) => theme.colors.text};
-  color: #fff;
+  background: #050A0B;
+  color: ${({ theme }) => theme.colors.text};
 `
 
 export const FooterInner = styled.div`
@@ -31,7 +31,7 @@ export const FooterMeta = styled.div`
 
 export const LinkTitle = styled.p`
   margin: 0 0 10px;
-  color: rgba(255, 255, 255, 0.58);
+  color: ${({ theme }) => theme.colors.mutedText};
   font-size: 12px;
   font-weight: 700;
   line-height: 1.3;
@@ -41,7 +41,7 @@ export const LinkTitle = styled.p`
 
 export const Slogan = styled.p`
   margin: 0;
-  color: rgba(255, 255, 255, 0.82);
+  color: ${({ theme }) => theme.colors.text};
   font-size: 16px;
   line-height: 1.6;
 `
@@ -54,7 +54,7 @@ export const LinkList = styled.ul`
   padding: 0;
 
   span {
-    color: rgba(255, 255, 255, 0.82);
+    color: ${({ theme }) => theme.colors.text};
     font-size: 15px;
     line-height: 1.5;
   }
@@ -65,14 +65,14 @@ export const LinkList = styled.ul`
 `
 
 export const LinkItem = styled.a`
-  color: rgba(255, 255, 255, 0.86);
+  color: ${({ theme }) => theme.colors.text};
   font-size: 15px;
   font-weight: 600;
   line-height: 1.5;
   transition: color 180ms ease;
 
   &:hover {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.accent};
   }
 `
 
@@ -97,7 +97,7 @@ export const SocialIcon = styled.a`
   height: 38px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.text};
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 
   svg {

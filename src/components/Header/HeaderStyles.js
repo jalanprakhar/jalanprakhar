@@ -6,7 +6,7 @@ export const Container = styled.header`
   z-index: 20;
   width: 100%;
   border-bottom: 1px solid ${({ theme }) => theme.colors.softBorder};
-  background: rgba(246, 247, 249, 0.9);
+  background: rgba(7, 16, 18, 0.9);
   backdrop-filter: blur(18px);
 `
 
@@ -48,7 +48,7 @@ export const BrandMark = styled.span`
   height: 40px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.surfaceElevated};
   color: ${({ theme }) => theme.colors.accent};
   font-size: 14px;
   font-weight: 800;
@@ -98,7 +98,7 @@ export const NavLink = styled.a`
   transition: background 180ms ease, color 180ms ease;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.surface};
+    background: ${({ theme }) => theme.colors.surfaceElevated};
     color: ${({ theme }) => theme.colors.accent};
   }
 `
@@ -126,7 +126,7 @@ export const SocialIcon = styled.a`
   height: 36px;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 8px;
-  background: ${({ theme }) => theme.colors.surface};
+  background: ${({ theme }) => theme.colors.surfaceElevated};
   color: ${({ theme }) => theme.colors.text};
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 
