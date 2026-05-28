@@ -270,7 +270,7 @@ Color rules:
 | Resume fallback behavior | If `resumeUrl` is still `TODO_PUBLIC_RESUME_URL`, CTA routes to `#contact` and does not expose a local file path |
 | Secondary CTA | See GitHub |
 | Experience section eyebrow | Experience |
-| Experience section heading | Professional systems, in reverse chronological order |
+| Experience section heading | Professional Journey |
 | Experience section lead | Resume-backed roles focused on agentic AI systems, backend platforms, and operational impact. |
 | Systems section eyebrow | Systems |
 | Systems section heading | Production agentic systems |

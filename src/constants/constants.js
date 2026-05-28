@@ -207,9 +207,7 @@ export const shellSections = [
   {
     id: 'experience',
     eyebrow: 'Experience',
-    title: 'Professional systems, in reverse chronological order',
-    lead:
-      'Resume-backed roles focused on agentic AI systems, backend platforms, and operational impact.',
+    title: 'Professional Journey',
     cards: experienceItems.map((item) => ({
       kicker: item.company,
       title: item.role,

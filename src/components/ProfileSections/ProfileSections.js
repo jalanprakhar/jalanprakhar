@@ -49,10 +49,6 @@ export const ExperienceSection = () => {
       <SectionInner>
         <SectionHeader>
           <SectionEyebrow>Experience</SectionEyebrow>
-          <SectionHeading>Professional systems, in reverse chronological order</SectionHeading>
-          <SectionLead>
-            Resume-backed roles focused on agentic AI systems, backend platforms, and operational impact.
-          </SectionLead>
         </SectionHeader>
 
         <OracleFeature>
@@ -148,10 +144,10 @@ export const SystemsSection = () => (
     <SectionInner>
       <SectionHeader>
         <SectionEyebrow>Systems</SectionEyebrow>
-        <SectionHeading>Production agentic systems</SectionHeading>
+        {/* <SectionHeading>Production agentic systems</SectionHeading>
         <SectionLead>
           Selected Oracle systems showing orchestration, governance, incident triage, and control-plane reliability.
-        </SectionLead>
+        </SectionLead> */}
       </SectionHeader>
 
       <HighlightGrid>
@@ -178,10 +174,10 @@ export const SkillsSection = () => (
     <SectionInner>
       <SectionHeader>
         <SectionEyebrow>Skills</SectionEyebrow>
-        <SectionHeading>Technical operating range</SectionHeading>
+        {/* <SectionHeading>Technical operating range</SectionHeading>
         <SectionLead>
           Agentic AI, backend/platform, cloud/devops, and fundamentals grouped for quick scanning.
-        </SectionLead>
+        </SectionLead> */}
       </SectionHeader>
 
       <SkillGrid>
@@ -205,11 +201,11 @@ export const CredentialsSection = () => (
   <PageSection id="credentials" bordered compact>
     <SectionInner>
       <SectionHeader>
-        <SectionEyebrow>Credentials</SectionEyebrow>
-        <SectionHeading>Achievements, education, and engineering leadership</SectionHeading>
+        <SectionEyebrow>Achievements, Responsibilities and Education</SectionEyebrow>
+        {/* <SectionHeading>Achievements, education, and engineering leadership</SectionHeading>
         <SectionLead>
           Compact proof points that support the professional systems story without competing with the experience spine.
-        </SectionLead>
+        </SectionLead> */}
       </SectionHeader>
 
       <CredentialGrid>
