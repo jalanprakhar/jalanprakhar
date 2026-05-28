@@ -7,8 +7,8 @@
 
 ### Positioning
 
-- [ ] **POS-01**: Visitor can understand within the first viewport that Prakhar is an agentic AI engineer.
-- [ ] **POS-02**: Hero copy highlights production-grade agentic AI systems, governance, reliability, and backend depth.
+- [x] **POS-01**: Visitor can understand within the first viewport that Prakhar is an agentic AI engineer.
+- [x] **POS-02**: Hero copy highlights production-grade agentic AI systems, governance, reliability, and backend depth.
 - [ ] **POS-03**: Site content is rewritten from the resume, not the old college-era portfolio copy.
 
 ### Experience
@@ -19,9 +19,9 @@
 
 ### Design
 
-- [ ] **DES-01**: Site uses executive polish with restrained agentic AI cues.
-- [ ] **DES-02**: UI is a full rebuild, not a minor restyle of the old sections.
-- [ ] **DES-03**: Site is responsive and professional on mobile and desktop.
+- [x] **DES-01**: Site uses executive polish with restrained agentic AI cues.
+- [x] **DES-02**: UI is a full rebuild, not a minor restyle of the old sections.
+- [x] **DES-03**: Site is responsive and professional on mobile and desktop.
 
 ### Content Architecture
 
@@ -68,15 +68,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| POS-01 | Phase 1 | Pending |
-| POS-02 | Phase 1 | Pending |
+| POS-01 | Phase 1 | Complete |
+| POS-02 | Phase 1 | Complete |
 | POS-03 | Phase 1 | Pending |
 | EXP-01 | Phase 2 | Pending |
 | EXP-02 | Phase 2 | Pending |
 | EXP-03 | Phase 2 | Pending |
-| DES-01 | Phase 1 | Pending |
-| DES-02 | Phase 1 | Pending |
-| DES-03 | Phase 1 | Pending |
+| DES-01 | Phase 1 | Complete |
+| DES-02 | Phase 1 | Complete |
+| DES-03 | Phase 1 | Complete |
 | CONT-01 | Phase 2 | Pending |
 | CONT-02 | Phase 2 | Pending |
 | CONT-03 | Phase 2 | Pending |
