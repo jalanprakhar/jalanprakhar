@@ -20,6 +20,7 @@ The portfolio must clearly communicate that Prakhar can build production-grade a
 - ✓ Existing codebase has been mapped in `.planning/codebase/` and is ready for phased modernization — existing
 - ✓ Phase 1 established the executive portfolio shell, first-viewport Agentic AI Engineer positioning, approved visual palette, responsive header/hero/section structure, and centralized shell content — Phase 1
 - ✓ Phase 2 replaced the active homepage content with resume-derived professional experience, Oracle production agentic AI proof, grouped skills, compact credentials, and safe centralized contact data — Phase 2
+- ✓ Phase 3 refined the active homepage into a dark agentic UI, fixed the Oracle MTS-1 blank-space issue with a narrative/proof split, and moved location out of contact cards into contact status text — Phase 3
 
 ### Active
 
@@ -29,7 +30,7 @@ The portfolio must clearly communicate that Prakhar can build production-grade a
 - [x] Present professional experience with quantified impact: centralized agentic harness platform, DevOps incident triage agent for 500+ Sev2 incidents, 30% MTTR reduction, 4.2/5 satisfaction, FastAPI control plane, Zolostays operational tooling, and Oracle data-labeling workflow work — validated in Phase 2.
 - [x] Highlight skills in agentic AI and backend platforms: Python, Golang, FastAPI, LangGraph, CrewAI, Spring Boot, React, LLM orchestration, OCI, Docker, Kubernetes, Redis, PostgreSQL, Kafka, system design, and DSA — validated in Phase 2.
 - [x] Modernize the UI structure and components enough that the final site feels intentionally redesigned, not just copy-edited — validated in Phases 1 and 2 for the active homepage.
-- [ ] Refine the active UI into a stronger dark-mode agentic portfolio, specifically fixing the Oracle MTS-1 card's excess blank space and making contact/location presentation feel intentional.
+- [x] Refine the active UI into a stronger dark-mode agentic portfolio, specifically fixing the Oracle MTS-1 card's excess blank space and making contact/location presentation feel intentional — validated in Phase 3.
 - [ ] Fix current codebase concerns during the rebuild: stale/dead files, duplicated content placement, misspelled component directory, sample API route, accessibility gaps, external-link safety, and missing verification scripts.
 - [ ] Make the site deployment-ready with a clear package-manager choice, build verification, and basic quality checks.
 
@@ -84,7 +85,7 @@ Existing codebase context:
 | Use executive polish with restrained agentic cues | The portfolio should feel credible and mature while still signaling agentic AI expertise | Phase 1 shell validated |
 | Fully rebuild the portfolio | The current site reflects a college-era identity and is not just a copy refresh | Phase 1 shell rebuilt; Phase 2 content fill-in remains |
 | Use the resume as primary content source | The resume captures current role, impact metrics, skills, and professional positioning | Phase 2 content validated |
-| Prioritize dark agentic UI refinement before launch cleanup | Current light UI has too much whitespace in key cards and does not yet feel agentic enough | Phase 3 re-scoped; quality/launch cleanup moved to Phase 4 |
+| Prioritize dark agentic UI refinement before launch cleanup | Current light UI has too much whitespace in key cards and does not yet feel agentic enough | Phase 3 validated; quality/launch cleanup remains Phase 4 |
 | Keep scope focused on a portfolio, not a product platform | Authentication, backend services, and dynamic systems do not support the core value for v1 | - Pending |
 
 ## Evolution
@@ -105,4 +106,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-29 after Phase 2 completion*
+*Last updated: 2026-05-29 after Phase 3 completion*
