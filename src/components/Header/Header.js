@@ -1,48 +1,68 @@
-import Link from 'next/link';
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { SiCodechef, SiCodeforces } from 'react-icons/si';
-import { DiCssdeck } from 'react-icons/di';
+import React from 'react'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
 
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import { navItems, profile, profileLinks } from '../../constants/constants'
+import {
+  Brand,
+  BrandMark,
+  BrandText,
+  Container,
+  NavInner,
+  NavLink,
+  NavLinks,
+  SocialIcon,
+  SocialLinks,
+} from './HeaderStyles'
+
+const icons = {
+  github: AiFillGithub,
+  linkedin: AiFillLinkedin,
+  email: MdEmail,
+}
+
+const isExternal = (href) => href.startsWith('http')
 
 const Header = () => (
   <Container>
-    <Div1>
-      <Link href="/">
-        <a style={{ display: 'flex', alignItems: 'center', color: "white" }}>
-          <DiCssdeck size="3rem" /> <span>Portfolio</span>
-        </a>
-      </Link>
-    </Div1>
-    <Div2>
-      <li>
-        <Link href="#projects">
-          <NavLink>Projects</NavLink>
-        </Link>
-      </li>
-      <li>
-        <Link href="#tech">
-          <NavLink>Technologies</NavLink>
-        </Link>
-      </li>
+    <NavInner>
+      <Brand href="/" aria-label="Prakhar Jalan home">
+        <BrandMark>PJ</BrandMark>
+        <BrandText>
+          {profile.name}
+          <span>{profile.role}</span>
+        </BrandText>
+      </Brand>
 
-    </Div2>
-    <Div3>
-      <SocialIcons href="https://www.codechef.com/users/jalanprakhar1">
-        <SiCodechef size="3rem" />
-      </SocialIcons>
-      <SocialIcons href="https://codeforces.com/profile/jalanprakhar">
-        <SiCodeforces size="3rem" />
-      </SocialIcons>
-      <SocialIcons href="https://github.com/jalanprakhar">
-        <AiFillGithub size="3rem" />
-      </SocialIcons>
-      <SocialIcons href="https://www.linkedin.com/in/prakhar-jalan-54aa07201/">
-        <AiFillLinkedin size="3rem" />
-      </SocialIcons>
-    </Div3>
+      <NavLinks aria-label="Primary navigation: Experience, Systems, Skills, Contact">
+        {navItems.map((item) => (
+          <li key={item.href}>
+            <NavLink href={item.href}>{item.label}</NavLink>
+          </li>
+        ))}
+      </NavLinks>
+
+      <SocialLinks aria-label="Profile links">
+        {profileLinks.map((link) => {
+          const Icon = icons[link.type]
+          const external = isExternal(link.href)
+
+          return (
+            <li key={link.href}>
+              <SocialIcon
+                href={link.href}
+                aria-label={link.label}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+              >
+                <Icon aria-hidden="true" />
+              </SocialIcon>
+            </li>
+          )
+        })}
+      </SocialLinks>
+    </NavInner>
   </Container>
-);
+)
 
 export default Header;

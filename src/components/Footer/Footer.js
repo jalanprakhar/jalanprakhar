@@ -1,46 +1,70 @@
-import React from 'react';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { SiCodechef, SiCodeforces } from 'react-icons/si';
+import React from 'react'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
 
-import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import { profile, profileLinks } from '../../constants/constants'
+import {
+  FooterInner,
+  FooterMeta,
+  FooterWrapper,
+  LinkItem,
+  LinkList,
+  LinkTitle,
+  Slogan,
+  SocialIcon,
+  SocialList,
+} from './FooterStyles'
+
+const icons = {
+  github: AiFillGithub,
+  linkedin: AiFillLinkedin,
+  email: MdEmail,
+}
+
+const isExternal = (href) => href.startsWith('http')
 
 const Footer = () => {
   return (
     <FooterWrapper>
-      <LinkList>
-        <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:+919892836847">+91 9892836847</LinkItem>
-        </LinkColumn>
-        <LinkColumn>
-          <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:jalansprakhar@gmail.com">
-            jalansprakhar@gmail.com
-          </LinkItem>
-        </LinkColumn>
-      </LinkList>
-      <SocialIconsContainer>
-        <CompanyContainer>
-          <Slogan>Learning one tech stack at a time</Slogan>
-        </CompanyContainer>
-        <SocialContainer>
-          <SocialIcons href="https://github.com/jalanprakhar">
-            <AiFillGithub size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://www.linkedin.com/in/prakhar-jalan-54aa07201/">
-            <AiFillLinkedin size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://www.codechef.com/users/jalanprakhar1">
-            <SiCodechef size="3rem" />
-          </SocialIcons>
-          <SocialIcons href="https://codeforces.com/profile/jalanprakhar">
-            <SiCodeforces size="3rem" />
-          </SocialIcons>
-        </SocialContainer>
-      </SocialIconsContainer>
+      <FooterInner>
+        <FooterMeta>
+          <LinkTitle>{profile.name}</LinkTitle>
+          <Slogan>Agentic AI systems, backend platforms, and reliability-focused engineering.</Slogan>
+        </FooterMeta>
+
+        <LinkList>
+          <li>
+            <LinkTitle>Email</LinkTitle>
+            <LinkItem href={`mailto:${profile.email}`}>{profile.email}</LinkItem>
+          </li>
+          <li>
+            <LinkTitle>Location</LinkTitle>
+            <span>{profile.location}</span>
+          </li>
+        </LinkList>
+
+        <SocialList aria-label="Footer profile links">
+          {profileLinks.map((link) => {
+            const Icon = icons[link.type]
+            const external = isExternal(link.href)
+
+            return (
+              <li key={link.href}>
+                <SocialIcon
+                  href={link.href}
+                  aria-label={link.label}
+                  target={external ? '_blank' : undefined}
+                  rel={external ? 'noopener noreferrer' : undefined}
+                >
+                  <Icon aria-hidden="true" />
+                </SocialIcon>
+              </li>
+            )
+          })}
+        </SocialList>
+      </FooterInner>
     </FooterWrapper>
-  );
-};
+  )
+}
 
 export default Footer;
