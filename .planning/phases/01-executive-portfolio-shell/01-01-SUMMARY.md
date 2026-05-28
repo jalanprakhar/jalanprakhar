@@ -136,14 +136,16 @@ completed: 2026-05-28
 - `rg "id=\"experience\"|id=\"systems\"|id=\"skills\"|id=\"contact\"|Systems content coming next" src/pages/index.js src/components src/constants/constants.js` passed.
 - `npm run build` failed under Node 22.22.0 with `ERR_OSSL_EVP_UNSUPPORTED`, consistent with the old Next.js/Webpack dependency tree.
 - `NODE_OPTIONS=--openssl-legacy-provider npm run build` passed.
-- `curl -I http://127.0.0.1:3000` returned `HTTP/1.1 200 OK` when run with sandbox escalation against the local dev server.
+- `curl -I http://127.0.0.1:3000` returned `HTTP/1.1 200 OK` when run with sandbox escalation against the restarted local dev server.
+- Headless Chrome desktop screenshot at 1440x1100 rendered the hero, profile image, header, CTAs, metrics, and visible next-section hint without server errors.
+- Headless Chrome mobile/tablet screenshot at 500x1200 rendered wrapped navigation, stacked CTAs, signal pills, and the inspectable profile image without clipped text.
 
 ## Issues Encountered
 
 - `node_modules` was missing at the start of verification. `npm ci` succeeded after sandbox escalation.
 - `npm ci` reported 23 vulnerabilities in the existing dependency tree. This is recorded as Phase 3 dependency debt; no dependency policy changes were made in Phase 1.
 - The default build command fails on Node 22 without `NODE_OPTIONS=--openssl-legacy-provider`.
-- Full browser/screenshot QA was not run because the user asked not to start MCP servers; verification stayed local through source checks, build, review, and HTTP response checks.
+- The first dev-server screenshot hit a stale `.next` chunk error after a production build had run while `next dev` was still alive. Restarting the dev server cleared the generated-cache issue; clean desktop and mobile/tablet screenshots then rendered successfully.
 
 ## User Setup Required
 
@@ -155,7 +157,7 @@ Phase 2 can now replace shell placeholders with resume-derived experience, syste
 
 ## Self-Check: PASSED
 
-All Phase 1 source assertions passed, the legacy OpenSSL build passed after the review fix, and the local dev server returned `200 OK`.
+All Phase 1 source assertions passed, the legacy OpenSSL build passed after the review fix, and the restarted local dev server returned `200 OK` with clean desktop and mobile/tablet screenshots.
 
 ---
 *Phase: 01-executive-portfolio-shell*
