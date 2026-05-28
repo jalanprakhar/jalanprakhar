@@ -51,7 +51,6 @@ Plans:
   5. Contact and social link data is centralized enough to avoid duplicated profile metadata.
 
 **Plans**: 1 plan
-
 Plans:
 
 - [ ] 02-01: Replace student-era content with resume-derived professional sections and centralized content data.
