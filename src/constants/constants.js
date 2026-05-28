@@ -1,3 +1,132 @@
+export const profile = {
+  name: 'Prakhar Jalan',
+  role: 'Agentic AI Engineer',
+  location: 'Bangalore, India',
+  email: 'jalansprakhar@gmail.com',
+  github: 'https://github.com/jalanprakhar',
+  linkedin: 'https://www.linkedin.com/in/jalansprakhar',
+  image: '/images/profile.jpeg',
+  // TODO: Replace with a stable public resume URL before launch.
+  resumeUrl: 'TODO_PUBLIC_RESUME_URL',
+}
+
+export const navItems = [
+  { label: 'Experience', href: '#experience' },
+  { label: 'Systems', href: '#systems' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Contact', href: '#contact' },
+]
+
+export const profileLinks = [
+  { label: 'GitHub', href: profile.github, type: 'github' },
+  { label: 'LinkedIn', href: profile.linkedin, type: 'linkedin' },
+  { label: 'Email', href: `mailto:${profile.email}`, type: 'email' },
+]
+
+export const heroCopy = {
+  eyebrow: 'Production systems, not demos',
+  role: profile.role,
+  support:
+    'Building production-grade AI systems with governance, reliability, orchestration, and backend depth.',
+  primaryCta: 'View Resume',
+  secondaryCta: 'See GitHub',
+}
+
+export const heroSignals = [
+  { label: 'Production systems, not demos', active: true },
+  { label: 'Policy-driven workflows', active: false },
+  { label: 'Control-plane reliability', active: false },
+]
+
+export const heroMetrics = [
+  { label: 'Agentic harness', value: 'LangGraph / Python' },
+  { label: 'Reliability focus', value: 'Guardrails + governance' },
+  { label: 'Backend depth', value: 'FastAPI / Go / OCI' },
+]
+
+export const shellSections = [
+  {
+    id: 'experience',
+    eyebrow: 'Experience',
+    title: 'Production engineering track',
+    lead:
+      'A polished shell for Oracle, Zolostays, and internship impact. Phase 2 will add the resume-derived metrics and role details.',
+    cards: [
+      {
+        kicker: 'Oracle MTS-1',
+        title: 'Agentic systems and control planes',
+        body: 'Reserved for production harness, DevOps agent, governance, and reliability work.',
+      },
+      {
+        kicker: 'Backend platforms',
+        title: 'High-concurrency service depth',
+        body: 'Reserved for Go, FastAPI, Spring Boot, data workflows, and operational tooling.',
+      },
+    ],
+  },
+  {
+    id: 'systems',
+    eyebrow: 'Systems',
+    title: 'Systems content coming next',
+    lead: 'This section is reserved for resume-derived experience and impact metrics in Phase 2.',
+    cards: [
+      {
+        kicker: 'Agentic harness',
+        title: 'Policy-driven workflows',
+        body: 'Structure for deterministic orchestration, tool-call control, and guardrail narratives.',
+      },
+      {
+        kicker: 'Incident triage',
+        title: 'Reliability operations',
+        body: 'Structure for incident analysis, MTTR impact, and Tier-0 operational proof points.',
+      },
+      {
+        kicker: 'Control plane',
+        title: 'Runtime governance',
+        body: 'Structure for agent management, cost control, and production safety details.',
+      },
+    ],
+  },
+  {
+    id: 'skills',
+    eyebrow: 'Skills',
+    title: 'Technical focus areas',
+    lead:
+      'A compact shell for agentic AI, backend/platform systems, cloud/devops, and fundamentals. Phase 2 will fill the final skill taxonomy.',
+    cards: [
+      {
+        kicker: 'Agentic AI',
+        title: 'LangGraph, CrewAI, orchestration',
+        body: 'Reserved for frameworks, tool-use patterns, evaluations, and governance.',
+      },
+      {
+        kicker: 'Platform',
+        title: 'Python, Go, FastAPI, Kafka',
+        body: 'Reserved for backend architecture, concurrency, and distributed system experience.',
+      },
+    ],
+  },
+  {
+    id: 'contact',
+    eyebrow: 'Contact',
+    title: 'Let the work speak directly',
+    lead:
+      'A restrained contact shell for recruiters and AI platform teams. Phase 2 will finalize the surrounding copy and contact architecture.',
+    cards: [
+      {
+        kicker: 'Email',
+        title: profile.email,
+        body: 'Direct channel for portfolio, agentic AI, and backend platform conversations.',
+      },
+      {
+        kicker: 'Profiles',
+        title: 'GitHub and LinkedIn',
+        body: 'Centralized links are reused across the header, hero, contact shell, and footer.',
+      },
+    ],
+  },
+]
+
 export const projects = [
   {
     title: "Codev",
