@@ -100,5 +100,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Executive Portfolio Shell | 1/1 | Complete    | 2026-05-28 |
 | 2. Resume-Driven Content Rebuild | 1/1 | Complete    | 2026-05-28 |
-| 3. Dark Agentic UI Refinement | 1/1 | Complete   | 2026-05-28 |
+| 3. Dark Agentic UI Refinement | 1/1 | Complete    | 2026-05-28 |
 | 4. Quality and Launch Readiness | 0/1 | Not started | - |
