@@ -31,10 +31,10 @@
 
 ### Dark Agentic UI Refinement
 
-- [ ] **DARK-01**: Active homepage uses a polished dark-mode visual system with stronger but restrained agentic/system cues.
-- [ ] **DARK-02**: Oracle MTS-1/current-role presentation is denser and visually balanced, with no large empty space in the featured card.
-- [ ] **DARK-03**: Contact and location presentation feels intentional, not like an awkward standalone location card.
-- [ ] **DARK-04**: Desktop and mobile layouts avoid incoherent overlap, clipped text, excessive blank areas, and one-note visual treatment.
+- [x] **DARK-01**: Active homepage uses a polished dark-mode visual system with stronger but restrained agentic/system cues.
+- [x] **DARK-02**: Oracle MTS-1/current-role presentation is denser and visually balanced, with no large empty space in the featured card.
+- [x] **DARK-03**: Contact and location presentation feels intentional, not like an awkward standalone location card.
+- [x] **DARK-04**: Desktop and mobile layouts avoid incoherent overlap, clipped text, excessive blank areas, and one-note visual treatment.
 
 ### Code Quality
 
@@ -87,10 +87,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Complete |
 | CONT-03 | Phase 2 | Complete |
-| DARK-01 | Phase 3 | Pending |
-| DARK-02 | Phase 3 | Pending |
-| DARK-03 | Phase 3 | Pending |
-| DARK-04 | Phase 3 | Pending |
+| DARK-01 | Phase 3 | Complete |
+| DARK-02 | Phase 3 | Complete |
+| DARK-03 | Phase 3 | Complete |
+| DARK-04 | Phase 3 | Complete |
 | QUAL-01 | Phase 4 | Pending |
 | QUAL-02 | Phase 4 | Pending |
 | QUAL-03 | Phase 4 | Pending |
