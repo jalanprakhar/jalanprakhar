@@ -9,13 +9,13 @@
 
 - [x] **POS-01**: Visitor can understand within the first viewport that Prakhar is an agentic AI engineer.
 - [x] **POS-02**: Hero copy highlights production-grade agentic AI systems, governance, reliability, and backend depth.
-- [ ] **POS-03**: Site content is rewritten from the resume, not the old college-era portfolio copy.
+- [x] **POS-03**: Site content is rewritten from the resume, not the old college-era portfolio copy.
 
 ### Experience
 
-- [ ] **EXP-01**: Visitor can view Oracle MTS-1 work with agentic harness, LangGraph, DevOps agent, MTTR, and control-plane impact.
-- [ ] **EXP-02**: Visitor can view Zolostays and Oracle internship experience with concise business impact.
-- [ ] **EXP-03**: Visitor can view achievements, education, and responsibilities without overwhelming the main story.
+- [x] **EXP-01**: Visitor can view Oracle MTS-1 work with agentic harness, LangGraph, DevOps agent, MTTR, and control-plane impact.
+- [x] **EXP-02**: Visitor can view Zolostays and Oracle internship experience with concise business impact.
+- [x] **EXP-03**: Visitor can view achievements, education, and responsibilities without overwhelming the main story.
 
 ### Design
 
@@ -25,9 +25,9 @@
 
 ### Content Architecture
 
-- [ ] **CONT-01**: Portfolio has clear sections for hero, experience, selected systems/projects, skills, achievements, and contact.
-- [ ] **CONT-02**: Skills are grouped around Agentic AI, backend/platform, cloud/devops, and fundamentals.
-- [ ] **CONT-03**: Contact/social links are centralized and safe for reuse.
+- [x] **CONT-01**: Portfolio has clear sections for hero, experience, selected systems/projects, skills, achievements, and contact.
+- [x] **CONT-02**: Skills are grouped around Agentic AI, backend/platform, cloud/devops, and fundamentals.
+- [x] **CONT-03**: Contact/social links are centralized and safe for reuse.
 
 ### Code Quality
 
@@ -70,16 +70,16 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | POS-01 | Phase 1 | Complete |
 | POS-02 | Phase 1 | Complete |
-| POS-03 | Phase 1 | Pending |
-| EXP-01 | Phase 2 | Pending |
-| EXP-02 | Phase 2 | Pending |
-| EXP-03 | Phase 2 | Pending |
+| POS-03 | Phase 2 | Complete |
+| EXP-01 | Phase 2 | Complete |
+| EXP-02 | Phase 2 | Complete |
+| EXP-03 | Phase 2 | Complete |
 | DES-01 | Phase 1 | Complete |
 | DES-02 | Phase 1 | Complete |
 | DES-03 | Phase 1 | Complete |
-| CONT-01 | Phase 2 | Pending |
-| CONT-02 | Phase 2 | Pending |
-| CONT-03 | Phase 2 | Pending |
+| CONT-01 | Phase 2 | Complete |
+| CONT-02 | Phase 2 | Complete |
+| CONT-03 | Phase 2 | Complete |
 | QUAL-01 | Phase 3 | Pending |
 | QUAL-02 | Phase 3 | Pending |
 | QUAL-03 | Phase 3 | Pending |

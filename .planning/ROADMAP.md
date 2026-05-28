@@ -14,7 +14,7 @@ Rebuild the existing college-era Next.js portfolio into a polished professional 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Executive Portfolio Shell** - Establish the new visual system, first viewport, and responsive page structure. (completed 2026-05-28)
-- [ ] **Phase 2: Resume-Driven Content Rebuild** - Replace old content with professional experience, skills, achievements, and contact architecture.
+- [x] **Phase 2: Resume-Driven Content Rebuild** - Replace old content with professional experience, skills, achievements, and contact architecture. (completed 2026-05-28)
 - [ ] **Phase 3: Quality and Launch Readiness** - Clean dead code, fix accessibility/link safety, choose package manager, and add build checks.
 
 ## Phase Details
@@ -53,7 +53,7 @@ Plans:
 **Plans**: 1 plan
 Plans:
 
-- [ ] 02-01: Replace student-era content with resume-derived professional sections and centralized content data.
+- [x] 02-01: Replace student-era content with resume-derived professional sections and centralized content data.
 
 ### Phase 3: Quality and Launch Readiness
 
@@ -81,5 +81,5 @@ Phases execute in numeric order: 1 -> 2 -> 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Executive Portfolio Shell | 1/1 | Complete    | 2026-05-28 |
-| 2. Resume-Driven Content Rebuild | 0/1 | Not started | - |
+| 2. Resume-Driven Content Rebuild | 1/1 | Complete    | 2026-05-28 |
 | 3. Quality and Launch Readiness | 0/1 | Not started | - |

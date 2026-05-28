@@ -19,15 +19,16 @@ The portfolio must clearly communicate that Prakhar can build production-grade a
 - ✓ Existing site includes social/profile links, project cards, and static image assets — existing
 - ✓ Existing codebase has been mapped in `.planning/codebase/` and is ready for phased modernization — existing
 - ✓ Phase 1 established the executive portfolio shell, first-viewport Agentic AI Engineer positioning, approved visual palette, responsive header/hero/section structure, and centralized shell content — Phase 1
+- ✓ Phase 2 replaced the active homepage content with resume-derived professional experience, Oracle production agentic AI proof, grouped skills, compact credentials, and safe centralized contact data — Phase 2
 
 ### Active
 
-- [ ] Rebuild the portfolio content around current professional identity: IIIT Allahabad 2024 graduate, Oracle MTS-1, agentic AI systems, governance, reliability, LLM orchestration, FastAPI, Python, LangGraph, Go, and production backend systems.
-- [ ] Replace student-era hero, technology, project, and footer content with resume-derived professional copy and stronger proof points.
-- [ ] Create a polished executive visual direction with restrained agentic AI cues: system traces, orchestration/control-plane language, reliability metrics, and high-signal technical storytelling without looking gimmicky.
-- [ ] Present professional experience with quantified impact: centralized agentic harness platform, DevOps incident triage agent for 500+ Sev2 incidents, 30% MTTR reduction, 4.2/5 satisfaction, FastAPI control plane, Zolostays operational tooling, and Oracle data-labeling workflow work.
-- [ ] Highlight skills in agentic AI and backend platforms: Python, Golang, FastAPI, LangGraph, CrewAI, Spring Boot, React, LLM orchestration, OCI, Docker, Kubernetes, Redis, PostgreSQL, Kafka, system design, and DSA.
-- [ ] Modernize the UI structure and components enough that the final site feels intentionally redesigned, not just copy-edited.
+- [x] Rebuild the portfolio content around current professional identity: IIIT Allahabad 2024 graduate, Oracle MTS-1, agentic AI systems, governance, reliability, LLM orchestration, FastAPI, Python, LangGraph, Go, and production backend systems — validated in Phase 2.
+- [x] Replace student-era hero, technology, project, and footer content with resume-derived professional copy and stronger proof points — validated in Phases 1 and 2 for the active homepage.
+- [x] Create a polished executive visual direction with restrained agentic AI cues: system traces, orchestration/control-plane language, reliability metrics, and high-signal technical storytelling without looking gimmicky — validated in Phases 1 and 2.
+- [x] Present professional experience with quantified impact: centralized agentic harness platform, DevOps incident triage agent for 500+ Sev2 incidents, 30% MTTR reduction, 4.2/5 satisfaction, FastAPI control plane, Zolostays operational tooling, and Oracle data-labeling workflow work — validated in Phase 2.
+- [x] Highlight skills in agentic AI and backend platforms: Python, Golang, FastAPI, LangGraph, CrewAI, Spring Boot, React, LLM orchestration, OCI, Docker, Kubernetes, Redis, PostgreSQL, Kafka, system design, and DSA — validated in Phase 2.
+- [x] Modernize the UI structure and components enough that the final site feels intentionally redesigned, not just copy-edited — validated in Phases 1 and 2 for the active homepage.
 - [ ] Fix current codebase concerns during the rebuild: stale/dead files, duplicated content placement, misspelled component directory, sample API route, accessibility gaps, external-link safety, and missing verification scripts.
 - [ ] Make the site deployment-ready with a clear package-manager choice, build verification, and basic quality checks.
 
@@ -81,7 +82,7 @@ Existing codebase context:
 | Target hiring managers and AI/platform teams first | The portfolio should convert professional evaluation, not just personal discovery | - Pending |
 | Use executive polish with restrained agentic cues | The portfolio should feel credible and mature while still signaling agentic AI expertise | Phase 1 shell validated |
 | Fully rebuild the portfolio | The current site reflects a college-era identity and is not just a copy refresh | Phase 1 shell rebuilt; Phase 2 content fill-in remains |
-| Use the resume as primary content source | The resume captures current role, impact metrics, skills, and professional positioning | - Pending |
+| Use the resume as primary content source | The resume captures current role, impact metrics, skills, and professional positioning | Phase 2 content validated |
 | Keep scope focused on a portfolio, not a product platform | Authentication, backend services, and dynamic systems do not support the core value for v1 | - Pending |
 
 ## Evolution
@@ -102,4 +103,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-29 after Phase 1 completion*
+*Last updated: 2026-05-29 after Phase 2 completion*
